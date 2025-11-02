@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% extends "base.html" %}
+
+    {% block content %}
+
+    <h1 class="title is-1">This is a test for conditional statements.</h1>
+    {% if score < 0 %}
+        <h4 class="title is-4">Score is: {{ score }}. TOO LOW!</h4>
+    {% elif score < 100 %}
+        <h4 class="title is-4">Score is: {{ score }}. JUST NICE!</h4>
+    {% else %}
+        <h4 class="title is-4">Score is: {{ score }}. TOO HIGH!</h4>
+    {% endif %}
+
+    {% endblock %}
+
+</body>
+</html>
